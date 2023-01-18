@@ -11,28 +11,42 @@
             background-color: aqua;
         }
         .container{
-            /* transition: 2s; */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .box{
             border: 6px solid black;
             border-radius: 10px;
             text-align: center;
-            margin: 22rem 15rem;
-            font-size: 4rem;
+            box-shadow: 8px 8px black;
+            padding: 5%;
+            height: 30%;
+            background: linear-gradient(30deg,#ecfdff,#30cbaf);
+            opacity: 0.9;
         }
         #btn{
-            border: 6px solid rgb(50, 112, 112);
             border-radius: 10px;
-            font-size: 3rem ;
+            font-size: 5vh ;
             cursor: pointer;
-            background-color: rgb(212, 94, 212);
+            background:linear-gradient(to right,#a18cd1,#fbc2eb);
             
+        }
+        h2{
+            font-size: 10vh;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- <span>#</span> -->
-        <h2 id="heading">#ffff</h2>
-        <button id="btn" onclick="color()">Click Here</button>
+        <div class="box">
+            <!-- <span>#</span> -->
+            <h2 id="heading">#ffff</h2>
+            <button id="btn" onclick="color()">Click Here</button>
+        </div>
+        
     </div>
     <script>
         function color(){
