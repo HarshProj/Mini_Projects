@@ -13,6 +13,12 @@ function increment(){
     // document.getElementById('h2').innerText=count; or we can use
     countEl.innerText=count;
 }
+function decrement(){
+    count=count-1;
+    // console.log(count);
+    // document.getElementById('h2').innerText=count; or we can use
+    countEl.innerText=count;
+}
 function save(){
     console.log(count);
 }
