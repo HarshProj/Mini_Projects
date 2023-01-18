@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<style>
+    body{
+        background-color: rgb(118, 118, 209);
+    }
+    .container{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 26rem 0px;
+        justify-content: center;
+    }
+    span{
+        /* padding: 4px 10px; */
+        font-size: 5rem;
+        font-weight: bold;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <span id="hour">00</span>
+        <span>:</span>
+        <span id="minute">00</span>
+        <span>:</span>
+        <span id="second">00</span>
+        <span>:</span>
+        <span id="section">AM</span>
+    </div>
+    <script>
+        
+        function updatetime(){
+            d=new Date();
+            console.log(d);
+            hr=document.getElementById('hour');
+            min=document.getElementById('minute');
+            sec=document.getElementById('second');
+            seti=document.getElementById('section');
+    
+            hours=d.getHours();
+            minutes=d.getMinutes();
+            seconds=d.getSeconds();
+            hr.innerHTML=hours;
+            min.innerHTML=minutes;
+            sec.innerHTML=seconds;
+            if(hours>=12){
+                seti.innerHTML="PM";
+            }
+            else{
+                seti.innerHTML="AM";
+            }
+        }
+        setInterval(updatetime,10);
+    </script>
+</body>
+</html>

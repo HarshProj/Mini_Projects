@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color coding</title>
+    <style>
+        body{
+            transition: 2s;
+            background-color: aqua;
+        }
+        .container{
+            /* transition: 2s; */
+            border: 6px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin: 22rem 15rem;
+            font-size: 4rem;
+        }
+        #btn{
+            border: 6px solid rgb(50, 112, 112);
+            border-radius: 10px;
+            font-size: 3rem ;
+            cursor: pointer;
+            background-color: rgb(212, 94, 212);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <span>#</span> -->
+        <h2 id="heading">#ffff</h2>
+        <button id="btn" onclick="color()">Click Here</button>
+    </div>
+    <script>
+        function color(){
+            let randomnumber=Math.floor(Math.random()*16777215);
+            let randomcode="#"+randomnumber.toString(16);
+            document.body.style.backgroundColor=randomcode;//importan line
+            let head=document.getElementById('heading');
+            head.innerHTML=randomcode;
+        }
+        //note if we dont use onclick the we will use addEventListener
+        // document.getElementById("btn").addEventListener{
+        //     "click",
+        //     color
+        // }
+        // color();
+        //then we will remove the onclick tag in button and we should then call the function.this will also produces the same output
+    </script>
+</body>
+</html>

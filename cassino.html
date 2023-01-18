@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cassino-Black Jack</title>
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            color: goldenrod;
+        }
+        #message-el{
+            font-style: italic;
+        }
+        button{
+            color: #016f32;
+            width: 150px;
+            background: goldenrod;
+            padding-top:5px;
+            padding-bottom:5px;
+            margin-top:2px;
+            margin-bottom:2px;
+            font-weight: bold;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Black jack</h1>
+    <p id="message-el">Want to play a round</p>
+    <p id="cards-el">Cards:</p>
+    <p id="sum-el">Sum:</p>
+    <button onclick="startgame()">START GAME</button>
+    <button onclick="newcard()">New Card</button>
+</body>
+
+<script>
+    //Note here ace equals to 11 and the king equals to 10 one can win this game only when he she getsum of cards equal to 21 or closer to 21 and if any one get greater than 21 he /she will thrown out of the game
+    let firstcard=10
+    let secondcard=9
+    let cards=[firstcard,secondcard]//array ordered list of items
+    let sum=firstcard+secondcard
+    let hasblackjack=false
+    let isalive=true
+    let message=""
+    let messageEl=document.getElementById("message-el")
+    // let sumEl=document.getElementById("sum-el")
+    let sumEl=document.querySelector("#sum-el")//This makes more sense
+    let cardsEl=document.getElementById("cards-el")
+    function startgame(){
+        rendergame()
+    }
+    function rendergame(){
+        cardsEl.textContent="Cards:"+cards[0]+" "+cards[1]
+        // cardsEl.textContent="Cards:"+firstcard+" "+secondcard
+        sumEl.textContent="Sum:"+sum
+        if (sum<=20){
+            message="Do you want to draw another card?"
+        }
+        else if(sum===21){//Note the ===(This means strictly equal) equal means it is only true when there is 100   both side are int but in case of == it gives true if100=="100"is given
+            message="You've got Black jack"
+            hasblackjack=true
+        }
+        
+        else{
+            message="You're out of the game:"
+            isalive=false
+        }
+        messageEl.textContent=message
+    }
+
+    function newcard(){
+        let newca=4
+        console.log("Drawing a new card from the deck")
+        sum+=newca
+        cards.push(newca)
+        rendergame()
+    }
+</script>
+</html>
+
+<!-- //searc fo xeneta company -->

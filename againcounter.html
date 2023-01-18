@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>People Entered</h1>
+    <h1 id="count">00</h1>
+    <button id="btn" onclick="increment()">Increment</button>
+    <button class="save" onclick="save()">Save</button>
+    <p id="saveEl">Previous enteries:</p>
+
+</body>
+<script>
+    let countel=document.getElementById("count")
+    let elm=document.getElementById("saveEl")
+    let count=0
+
+    function increment(){
+        count=count+1;
+        countel.textContent=count;
+    }
+
+    function save(){
+        console.log(count);
+        elm.textContent=elm.textContent +count+" - ";
+        count=0
+        countel.textContent=count;
+    }
+//For more visit innertext alternative mdn
+</script>
+</html>

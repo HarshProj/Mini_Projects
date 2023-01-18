@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background: linear-gradient(-45deg,rgb(49, 49, 118),cyan);
+            scroll-behavior: smooth;
+        }
+        ::-webkit-scrollbar{
+            width: 3vh;
+            height: 5vh;
+        }
+        ::-webkit-scrollbar-thumb{
+            background:linear-gradient(30deg,cyan,rgb(202, 29, 29));
+            border-radius: 10px;
+        }
+        #hello{
+            text-align: center;
+            padding: 8vh;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            height: 20%;
+            width: 35%;
+            height: 30%;
+            padding: 8vh;
+            text-align:center;
+        }
+        .image{
+            height: 80%;
+            width: 90%;
+            display: block;
+        }
+        a{
+            cursor: pointer;
+        }
+        @media  only screen and (max-width:400){
+            .box{
+                width: 35%;
+                height: 50vh;
+
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h2 id="hello">MY mini projects </h2>
+    <div class="container">
+        
+            <div class="box"><a href="againcounter.html"><img src="img1.jpg" alt="relode image" class="image"> People Counter App</a></div>
+            <div class="box"><a href="calculator.html"><img src="img1.jpg" alt="relode image" class="image"> Calculator</a></div>
+            <div class="box"><a href="cassino.html"><img src="img1.jpg" alt="relode image" class="image"> Cassino</a></div>
+            <div class="box"><a href="increment.html"><img src="img1.jpg" alt="relode image" class="image"> Increment Decrement App</a></div>
+            <div class="box"><a href="Digital_Clock.html"><img src="img1.jpg" alt="relode image" class="image"> Digital clock</a></div>
+            <div class="box"><a href="color_coding.html"><img src="img1.jpg" alt="relode image" class="image"> Get color-coding of random colors</a></div>
+        
+    </div>
+</body>
+<script>
+    let welcome=document.getElementById("hello");
+
+    // let name="Harsh "
+    // let greeting="Hello Dear"
+
+    // welcome.innerText=name+greeting
+
+    welcome.innerText+="😎"
+    //Dom --->Document object Model
+</script>
+</html>
