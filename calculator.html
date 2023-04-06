@@ -11,63 +11,84 @@
             text-align: center;
             justify-content: center;
         }
-
-        h1 {
-            font-size: 4rem;
+        hr{
+            color: gray;
         }
-        #disp{
-            background-color: black;
-            color: white;
-            padding: 12px 42%
-        }
-
-        .container {
-            font-size: 14rem;
-            border: 2px solid black;
-            margin: auto auto;
-            width: 80%;
+        .maincont{
+            background-color: rgb(54, 48, 48);
+            /* border: 2px solid black; */
+            box-shadow: 5px 5px 10px;
+            border-radius: 10px;
+            height: 100vh;
+            width: 70vh;
             display: flex;
             flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
+        }
+        .cont{
+            /* border: 2px solid red; */
+            height: 20%;
+        }
+        .outline{
+            display: flex;
+            /* border: 2px solid red; */
+            width: 100%;
             align-items: center;
-
-
+            justify-content: center;
         }
-
-        button {
-            height: 50%;
-            width: 19%;
-            cursor: pointer;
-            padding: 28px 7px;
-            font-size: 5rem;
+        input{
+            width: 15vh;
+            height: 60%;
         }
-        
+        .cont2{
+            margin-top: 5px;
+            width: 50vh;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Welcome to my calculator</h1>
-    <div class="container">
-        <div id="disp">00</div>
-        <div class="cont2">
-            <button id="btn-1">1</button>
-            <button id="btn-2">2</button>
-            <button id="btn-3">3</button>
-            <button id="add">+</button>
-            <button id="btn-4">4</button>
-            <button id="btn-5">5</button>
-            <button id="btn-6">6</button>
-            <button id="sub">-</button>
-            <button id="btn-7">7</button>
-            <button id="btn-8">8</button>
-            <button id="btn-9">9</button>
-            <button id="mul">*</button>
-            <button id="btn-0">0</button>
-            <button id="div">/</button>
-        </div>
+    <h2>Calculator</h2>
+    <form name="calci">
+        <div class="outline">
+        <div class="maincont">
 
+                <div class="cont">
+                    
+            <input type="text" class="cont2" name="display">
+            <hr>
+        </div>
+        <div class="cont">
+
+            <input type="button"  value="1" onclick="calci.display.value+=1">
+            <input type="button" value="2" onclick="calci.display.value+=2">
+            <input type="button" value="3" onclick="calci.display.value+=3">
+            <input type="button" value="+" onclick="calci.display.value+='+'">
+        </div>
+        <div class="cont">
+
+            <input type="button" value="4" onclick="calci.display.value+=4">
+            <input type="button" value="5" onclick="calci.display.value+=5">
+            <input type="button" value="6" onclick="calci.display.value+=6">
+            <input type="button" value="-" onclick="calci.display.value+='-'">
+        </div>
+        <div class="cont">
+
+            <input type="button" value="7" onclick="calci.display.value+=7">
+            <input type="button" value="8" onclick="calci.display.value+=8">
+            <input type="button" value="9" onclick="calci.display.value+=9">
+            <input type="button" value="/" onclick="calci.display.value+='/'">
+        </div>
+            <div class="cont">
+                
+                <input type="button" value="*" onclick="calci.display.value+='*'">
+                <input type="button" value="**" onclick="calci.display.value+='**'">
+                <input type="button" value="Clr" onclick="calci.display.value=''">
+                <input type="button" value="=" onclick="calci.display.value=eval(calci.display.value)">
+            </div>
+            
     </div>
+</div>
+    </form>
 </body>
 
 </html>
